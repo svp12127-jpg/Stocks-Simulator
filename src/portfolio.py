@@ -11,3 +11,10 @@ class Portfolio:
                 self.holdings[stock.tick] += shares
             else:
                 self.holdings[stock.tick] = shares
+    
+    def sell(self,stock,shares):
+        sell=stock.price*shares
+        self.cash=self.cash+sell
+        if stock.tick in self.holdings and self.holdings[stock.tick] >= shares:
+            self.holdings[stock.tick] -= shares
+            self.cash=self.cash-sell
