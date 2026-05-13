@@ -22,4 +22,4 @@ class Portfolio:
     def display(self):
         print("Cash:", self.cash)
         for tick, shares in self.holdings.items():
-            print(tick+": "+shares+" shares")
+            print(f"{tick}: {shares} shares")
