@@ -14,10 +14,10 @@ class Portfolio:
     
     def sell(self,stock,shares):
         sell=stock.price*shares
-        self.cash=self.cash+sell
+        
         if stock.tick in self.holdings and self.holdings[stock.tick] >= shares:
             self.holdings[stock.tick] -= shares
-            self.cash=self.cash-sell
+            self.cash=self.cash+sell
 
     def display(self):
         print("Cash:", self.cash)
