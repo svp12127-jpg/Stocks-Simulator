@@ -1,6 +1,5 @@
 import random
 
-
 class Stock:
     def __init__(self, tick, name, price):
         self.tick=tick
