@@ -18,3 +18,8 @@ class Portfolio:
         if stock.tick in self.holdings and self.holdings[stock.tick] >= shares:
             self.holdings[stock.tick] -= shares
             self.cash=self.cash-sell
+
+    def display(self):
+        print("Cash:", self.cash)
+        for tick, shares in self.holdings.items():
+            print(tick+": "+shares+" shares")
