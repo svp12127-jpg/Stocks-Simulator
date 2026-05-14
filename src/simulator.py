@@ -9,6 +9,7 @@ market.add(Stock("GME", "GameStop", 20.00))
 
 p = Portfolio()
 while True:
+    print()
     print("""--- Stock Simulator ---
 1. View Market
 2. Buy Stock
@@ -16,6 +17,7 @@ while True:
 4. View Portfolio
 5. Next Day
 6. Quit""")
+    print()
     c=int(input("Enter your choice: "))
     if c==1:
         print("Displaying market")
