@@ -31,6 +31,7 @@ while True:
     elif c==5:
         print("Next day")
         market.update()
+        market.display()
     elif c==6:
         print("Quit")
         break
