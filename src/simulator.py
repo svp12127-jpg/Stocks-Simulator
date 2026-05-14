@@ -1,0 +1,25 @@
+while True:
+    print("""--- Stock Simulator ---
+1. View Market
+2. Buy Stock
+3. Sell Stock
+4. View Portfolio
+5. Next Day
+6. Quit""")
+    c=int(input("Enter your choice: "))
+    if c==1:
+        print("Displaying market")
+    elif c==2:
+        print("Buying market")
+    elif c==3:
+        print("Selling market")
+    elif c==4:
+        print("Displaying portfolio")
+    elif c==5:
+        print("Next day")
+    elif c==6:
+        print("Quit")
+        break
+    else:
+        print("Choose again")
+        continue
