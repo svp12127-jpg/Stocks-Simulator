@@ -42,7 +42,7 @@ while True:
         market.update()
         market.display()
     elif c==6:
-        print("Quit")
+        print("Quitting")
         break
     else:
         print("Choose again")
