@@ -19,9 +19,11 @@ while True:
 6. Quit""")
     print()
     c=int(input("Enter your choice: "))
+
     if c==1:
         print("Displaying market")
         market.display()
+
     elif c==2:
         print("Buying market")
         ticket=input("Which ticket would you like? ")
@@ -33,8 +35,27 @@ while True:
                 break
         else:
             print("Stock not found!")
+            ticket=input("Which ticket would you like? ")
+        share=int(input("Enter number of shares: "))
+        for stock in market.stocks:
+            if stock.tick == ticket:
+                p.buy(stock, share)
+                print(f"Bought {share} shares of {ticket}")
+                break
+        else:
+            print("Stock not found!")
+            
     elif c==3:
         print("Selling market")
+        ticket=input("Which ticket would you like to sell? ")
+        share=int(input("Enter number of shares: "))
+        for stock in market.stocks:
+            if stock.tick == ticket:
+                p.sell(stock, share)
+                print(f"Sold {share} shares of {ticket}")
+                break
+        else:
+            print("Stock not found!")
     elif c==4:
         print("Displaying portfolio")
     elif c==5:
