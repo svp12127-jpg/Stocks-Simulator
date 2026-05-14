@@ -24,6 +24,12 @@ while True:
         market.display()
     elif c==2:
         print("Buying market")
+        ticket=input("Which ticket would you like? ")
+        share=int(input("Enter numberr of shares: "))
+        for stock in market.stocks:
+            if stock.tick==ticket:
+                p.buy(stock, share)
+                break
     elif c==3:
         print("Selling market")
     elif c==4:
