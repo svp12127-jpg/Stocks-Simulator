@@ -1,3 +1,16 @@
+import sys
+sys.path.insert(0, './src')
+
+from stock import Stock
+from market import Market
+from portfolio import Portfolio
+
+market = Market()
+market.add_stock(Stock("AAPL", "Apple", 180.00))
+market.add_stock(Stock("TSLA", "Tesla", 250.00))
+market.add_stock(Stock("GME", "GameStop", 20.00))
+
+p = Portfolio()
 while True:
     print("""--- Stock Simulator ---
 1. View Market
