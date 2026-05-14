@@ -30,6 +30,7 @@ while True:
         print("Displaying portfolio")
     elif c==5:
         print("Next day")
+        market.update()
     elif c==6:
         print("Quit")
         break
