@@ -1,6 +1,3 @@
-import sys
-sys.path.insert(0, './src')
-
 from stock import Stock
 from market import Market
 from portfolio import Portfolio
@@ -22,6 +19,7 @@ while True:
     c=int(input("Enter your choice: "))
     if c==1:
         print("Displaying market")
+        market.display()
     elif c==2:
         print("Buying market")
     elif c==3:
