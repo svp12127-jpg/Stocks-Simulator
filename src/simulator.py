@@ -30,8 +30,8 @@ while True:
         share=int(input("Enter numberr of shares: "))
         for stock in market.stocks:
             if stock.tick == ticket:
-                p.buy(stock, share)
-                print(f"Bought {share} shares of {ticket}")
+                if p.buy(stock, share):
+                    print(f"Bought {share} shares of {ticket}")
                 break
         else:
             print("Stock not found!")
