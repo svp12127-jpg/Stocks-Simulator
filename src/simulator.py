@@ -79,7 +79,7 @@ while True:
         p.showhistory()
         
     elif c==8:
-        print("Quitting")
+        print("Thank you for using the simulator!")
         break
     else:
         print("Choose again")
