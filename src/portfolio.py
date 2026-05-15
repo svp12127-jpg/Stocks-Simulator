@@ -20,8 +20,10 @@ class Portfolio:
         if stock.tick in self.holdings and self.holdings[stock.tick] >= shares:
             self.holdings[stock.tick] -= shares
             self.cash=self.cash+sell
+            return True
         else:
             print("Not enough shares to sell!")
+            return False
 
     def display(self):
         print("Cash:", self.cash)
