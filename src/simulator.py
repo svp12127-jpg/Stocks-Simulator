@@ -16,7 +16,8 @@ while True:
 3. Sell Stock
 4. View Portfolio
 5. Next Day
-6. Quit""")
+6. View chart
+7. Quit""")
     print()
     c=int(input("Enter your choice: "))
 
@@ -56,7 +57,11 @@ while True:
         print("Next day")
         market.update()
         market.display()
-    elif c==6:
+        
+    elif c==5:
+        print("Displaying graph")
+
+    elif c==7:
         print("Quitting")
         break
     else:
