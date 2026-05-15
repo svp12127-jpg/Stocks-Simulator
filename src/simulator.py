@@ -60,6 +60,18 @@ while True:
         
     elif c==6:
         print("Displaying graph")
+        import matplotlib.pyplot as plt
+        ticket = input("Which ticker would you like to chart? ")
+        for stock in market.stocks:
+            if stock.tick == ticket:
+                plt.plot(stock.history)
+                plt.title(stock.name)
+                plt.xlabel("Days")
+                plt.ylabel("Price ($)")
+                plt.show()
+                break
+        else:
+            print("Stock not found!")
 
     elif c==7:
         print("Quitting")
