@@ -6,13 +6,15 @@ class Stock:
         self.name=name
         self.price=price
         self.oldprice=price
+        self.history = [price]
 
     def update_price(self):
         # Randomly move the price up or down by up to 5%
         change = random.uniform(-0.05, 0.05)
         self.oldprice = self.price
         self.price = round(self.price * (1 + change), 2)
-
+        self.history.append(self.price)
+        
     def get_change(self):
         return round(self.price - self.oldprice, 2)
 
