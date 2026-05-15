@@ -3,7 +3,7 @@ class Portfolio:
         self.cash = 10000        #starting money
         self.holdings = {} 
         self.history = []
-        
+
     def buy(self,stock,shares):
         total=stock.price*shares
         if self.cash>=total:
@@ -12,6 +12,7 @@ class Portfolio:
                 self.holdings[stock.tick] += shares
             else:
                 self.holdings[stock.tick] = shares
+            self.history.append({"type": "BUY", "tick": stock.tick, "shares": shares, "price": stock.price, "total": total})
             return True
         else:
             print("Not enough cash!")
@@ -23,6 +24,7 @@ class Portfolio:
         if stock.tick in self.holdings and self.holdings[stock.tick] >= shares:
             self.holdings[stock.tick] -= shares
             self.cash=self.cash+sell
+            self.history.append({"type": "SELL", "tick": stock.tick, "shares": shares, "price": stock.price, "total": sell})
             return True
         else:
             print("Not enough shares to sell!")
