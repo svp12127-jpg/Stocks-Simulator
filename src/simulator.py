@@ -17,7 +17,8 @@ while True:
 4. View Portfolio
 5. Next Day
 6. View chart
-7. Quit""")
+7. Transaction History
+8. Quit""")
     print()
     c=int(input("Enter your choice: "))
 
@@ -74,6 +75,9 @@ while True:
             print("Stock not found!")
 
     elif c==7:
+        print("Displaying your history")
+
+    elif c==8:
         print("Quitting")
         break
     else:
