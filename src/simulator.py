@@ -58,7 +58,7 @@ while True:
         market.update()
         market.display()
         
-    elif c==5:
+    elif c==6:
         print("Displaying graph")
 
     elif c==7:
