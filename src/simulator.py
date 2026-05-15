@@ -35,16 +35,7 @@ while True:
                 break
         else:
             print("Stock not found!")
-            ticket=input("Which ticket would you like? ")
-        share=int(input("Enter number of shares: "))
-        for stock in market.stocks:
-            if stock.tick == ticket:
-                p.buy(stock, share)
-                print(f"Bought {share} shares of {ticket}")
-                break
-        else:
-            print("Stock not found!")
-            
+
     elif c==3:
         print("Selling market")
         ticket=input("Which ticket would you like to sell? ")
@@ -56,8 +47,11 @@ while True:
                 break
         else:
             print("Stock not found!")
+
     elif c==4:
         print("Displaying portfolio")
+        p.display()
+
     elif c==5:
         print("Next day")
         market.update()
