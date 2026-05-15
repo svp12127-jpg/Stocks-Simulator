@@ -40,10 +40,10 @@ class Portfolio:
 
     def showhistory(self):
         print("---Transaction History---")
-    for t in self.history:
-        sign = "-" if t['type'] == "BUY" else "+"
-        print(f"{t['type']} | {t['tick']} | {t['shares']} shares | ${t['price']} each | {sign}${t['total']}")
-        
+        for t in self.history:
+            sign = "-" if t['type'] == "BUY" else "+"
+            print(f"{t['type']} | {t['tick']} | {t['shares']} shares | ${t['price']} each | {sign}${t['total']}")
+
     def display(self,market):
         print("Cash:", self.cash)
         for tick, shares in self.holdings.items():
