@@ -76,7 +76,8 @@ while True:
 
     elif c==7:
         print("Displaying your history")
-
+        p.showhistory()
+        
     elif c==8:
         print("Quitting")
         break
