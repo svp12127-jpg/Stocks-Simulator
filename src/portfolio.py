@@ -11,8 +11,10 @@ class Portfolio:
                 self.holdings[stock.tick] += shares
             else:
                 self.holdings[stock.tick] = shares
+            return True
         else:
             print("Not enough cash!")
+        return False
     
     def sell(self,stock,shares):
         sell=stock.price*shares
