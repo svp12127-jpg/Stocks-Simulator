@@ -35,7 +35,7 @@ class Portfolio:
                     t+=stock.price*shares
         return round(t,2)            
 
-    def display(self,display):
+    def display(self,market):
         print("Cash:", self.cash)
         for tick, shares in self.holdings.items():
             print(f"{tick}: {shares} shares")
