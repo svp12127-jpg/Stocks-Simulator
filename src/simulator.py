@@ -51,7 +51,7 @@ while True:
 
     elif c==4:
         print("Displaying portfolio")
-        p.display()
+        p.display(market)
 
     elif c==5:
         print("Next day")
