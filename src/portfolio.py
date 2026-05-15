@@ -38,6 +38,11 @@ class Portfolio:
                     t+=stock.price*shares
         return round(t,2)            
 
+    def showhistory(self):
+        print("---Transaction History---")
+        for t in self.history:
+            print(f"{t['type']} | {t['tick']} | {t['shares']} shares | ${t['price']} each | Total: ${t['total']}")
+    
     def display(self,market):
         print("Cash:", self.cash)
         for tick, shares in self.holdings.items():
