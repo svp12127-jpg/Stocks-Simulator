@@ -32,11 +32,11 @@ class Portfolio:
         for tick, shares in self.holdings.items():
             for stock in market.stocks:
                 if stock.tick==tick:
-                    total+=stock.price*shares
-        return round(total,2)            
+                    t+=stock.price*shares
+        return round(t,2)            
 
     def display(self):
         print("Cash:", self.cash)
         for tick, shares in self.holdings.items():
             print(f"{tick}: {shares} shares")
-        print(f"Total Value: ${self.total_value(market)}")
+        print(f"Total Value: ${self.total(market)}")
