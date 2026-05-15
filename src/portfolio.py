@@ -39,3 +39,4 @@ class Portfolio:
         print("Cash:", self.cash)
         for tick, shares in self.holdings.items():
             print(f"{tick}: {shares} shares")
+        print(f"Total Value: ${self.total_value(market)}")
