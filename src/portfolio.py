@@ -14,7 +14,7 @@ class Portfolio:
             return True
         else:
             print("Not enough cash!")
-        return False
+            return False
     
     def sell(self,stock,shares):
         sell=stock.price*shares
