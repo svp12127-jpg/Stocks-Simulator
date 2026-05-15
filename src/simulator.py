@@ -28,7 +28,7 @@ while True:
     elif c==2:
         print("Buying market")
         ticket=input("Which ticket would you like? ")
-        share=int(input("Enter numberr of shares: "))
+        share=int(input("Enter number of shares: "))
         for stock in market.stocks:
             if stock.tick == ticket:
                 if p.buy(stock, share):
