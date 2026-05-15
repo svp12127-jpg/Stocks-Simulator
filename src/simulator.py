@@ -64,7 +64,7 @@ while True:
         ticket = input("Which ticker would you like to chart? ")
         for stock in market.stocks:
             if stock.tick == ticket:
-                plt.plot(stock.history)
+                plt.plot(range(len(stock.history)), stock.history)
                 plt.title(stock.name)
                 plt.xlabel("Days")
                 plt.ylabel("Price ($)")
